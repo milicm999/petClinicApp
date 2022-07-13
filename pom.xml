@@ -63,7 +63,7 @@
 	</build>
 	<scm>
 		<developerConnection>scm:git:https://github.com/milicm999/petClinicApp.git</developerConnection>
-		<tag>petClinicApp-2.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 
