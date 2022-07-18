@@ -1,4 +1,4 @@
-package services;
+package com.example.petClinicApp.model.services;
 
 import java.util.Set;
 

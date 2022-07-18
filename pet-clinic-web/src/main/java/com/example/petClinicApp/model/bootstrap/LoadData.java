@@ -4,10 +4,8 @@ import com.example.petClinicApp.model.Owner;
 import com.example.petClinicApp.model.Vet;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import services.OwnerService;
-import services.VetService;
-import services.map.OwnerServiceMap;
-import services.map.VetServiceMap;
+import com.example.petClinicApp.model.services.OwnerService;
+import com.example.petClinicApp.model.services.VetService;
 
 @Component
 public class LoadData implements CommandLineRunner {
@@ -15,10 +13,10 @@ public class LoadData implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public LoadData()
+    public LoadData(OwnerService ownerService, VetService vetService)
     {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

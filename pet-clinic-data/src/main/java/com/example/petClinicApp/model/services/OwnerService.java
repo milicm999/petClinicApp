@@ -1,8 +1,7 @@
-package services;
+package com.example.petClinicApp.model.services;
 
 import com.example.petClinicApp.model.Owner;
 
-import java.util.Set;
 
 public interface OwnerService extends CrudService<Owner,Long>{
 
