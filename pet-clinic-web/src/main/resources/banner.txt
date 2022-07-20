@@ -1,0 +1,20 @@
+
+
+        CCCCCCCCCCCCC     OOOOOOOOO     NNNNNNNN        NNNNNNNNEEEEEEEEEEEEEEEEEEEEEE
+     CCC::::::::::::C   OO:::::::::OO   N:::::::N       N::::::NE::::::::::::::::::::E
+   CC:::::::::::::::C OO:::::::::::::OO N::::::::N      N::::::NE::::::::::::::::::::E
+  C:::::CCCCCCCC::::CO:::::::OOO:::::::ON:::::::::N     N::::::NEE::::::EEEEEEEEE::::E
+ C:::::C       CCCCCCO::::::O   O::::::ON::::::::::N    N::::::N  E:::::E       EEEEEE
+C:::::C              O:::::O     O:::::ON:::::::::::N   N::::::N  E:::::E
+C:::::C              O:::::O     O:::::ON:::::::N::::N  N::::::N  E::::::EEEEEEEEEE
+C:::::C              O:::::O     O:::::ON::::::N N::::N N::::::N  E:::::::::::::::E
+C:::::C              O:::::O     O:::::ON::::::N  N::::N:::::::N  E:::::::::::::::E
+C:::::C              O:::::O     O:::::ON::::::N   N:::::::::::N  E::::::EEEEEEEEEE
+C:::::C              O:::::O     O:::::ON::::::N    N::::::::::N  E:::::E
+ C:::::C       CCCCCCO::::::O   O::::::ON::::::N     N:::::::::N  E:::::E       EEEEEE
+  C:::::CCCCCCCC::::CO:::::::OOO:::::::ON::::::N      N::::::::NEE::::::EEEEEEEE:::::E
+   CC:::::::::::::::C OO:::::::::::::OO N::::::N       N:::::::NE::::::::::::::::::::E
+     CCC::::::::::::C   OO:::::::::OO   N::::::N        N::::::NE::::::::::::::::::::E
+        CCCCCCCCCCCCC     OOOOOOOOO     NNNNNNNN         NNNNNNNEEEEEEEEEEEEEEEEEEEEEE
+
+
