@@ -1,6 +1,7 @@
 package com.example.petClinicApp.model.controllers;
 
 import com.example.petClinicApp.services.OwnerService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,7 @@ public class OwnerController {
 
     private final OwnerService ownerService;
 
-    public OwnerController(OwnerService ownerService) {
+    public OwnerController(@Qualifier("owners") OwnerService ownerService) {
         this.ownerService = ownerService;
     }
 
