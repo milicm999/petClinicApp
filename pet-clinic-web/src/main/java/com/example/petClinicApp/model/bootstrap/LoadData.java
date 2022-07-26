@@ -1,12 +1,9 @@
 package com.example.petClinicApp.model.bootstrap;
 
 import com.example.petClinicApp.model.*;
-import com.example.petClinicApp.services.PetTypeService;
-import com.example.petClinicApp.services.SpecialitiesServices;
+import com.example.petClinicApp.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.example.petClinicApp.services.OwnerService;
-import com.example.petClinicApp.services.VetService;
 
 import java.time.LocalDate;
 
@@ -19,12 +16,15 @@ public class LoadData implements CommandLineRunner {
     private final PetTypeService petTypeService;
     private final SpecialitiesServices specialitiesServices;
 
-    public LoadData(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialitiesServices specialitiesServices)
+    private final VisitSerice visitSerice;
+
+    public LoadData(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialitiesServices specialitiesServices, VisitSerice visitSerice)
     {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialitiesServices = specialitiesServices;
+        this.visitSerice = visitSerice;
     }
 
     @Override
@@ -81,6 +81,13 @@ public class LoadData implements CommandLineRunner {
         nemanjinPas.setOwner(owner2);
         nemanjinPas.setBirthDay(LocalDate.now());
         owner2.getPets().add(nemanjinPas);
+
+        Visit visit1=new Visit();
+        visit1.setPet(nemanjinPas);
+        visit1.setDate(LocalDate.now());
+        visit1.setDescription("Skin issue");
+
+        visitSerice.save(visit1);
 
         Pet majinPas=new Pet();
         majinPas.setName("Tara");
