@@ -1,11 +1,11 @@
-package com.example.petClinicApp.model.services.map;
+package com.example.petClinicApp.services.map;
 
 import com.example.petClinicApp.model.Owner;
 import com.example.petClinicApp.model.Pet;
-import com.example.petClinicApp.model.services.PetService;
-import com.example.petClinicApp.model.services.PetTypeService;
+import com.example.petClinicApp.services.PetService;
+import com.example.petClinicApp.services.PetTypeService;
 import org.springframework.stereotype.Service;
-import com.example.petClinicApp.model.services.OwnerService;
+import com.example.petClinicApp.services.OwnerService;
 
 import java.util.Set;
 

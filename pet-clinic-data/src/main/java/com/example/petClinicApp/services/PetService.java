@@ -1,4 +1,4 @@
-package com.example.petClinicApp.model.services;
+package com.example.petClinicApp.services;
 
 import com.example.petClinicApp.model.Pet;
 

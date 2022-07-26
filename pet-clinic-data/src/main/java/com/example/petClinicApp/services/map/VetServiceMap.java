@@ -1,10 +1,10 @@
-package com.example.petClinicApp.model.services.map;
+package com.example.petClinicApp.services.map;
 
-import com.example.petClinicApp.model.Speciality;
+import com.example.petClinicApp.model.Specialty;
 import com.example.petClinicApp.model.Vet;
-import com.example.petClinicApp.model.services.SpecialitiesServices;
+import com.example.petClinicApp.services.SpecialitiesServices;
 import org.springframework.stereotype.Service;
-import com.example.petClinicApp.model.services.VetService;
+import com.example.petClinicApp.services.VetService;
 
 import java.util.Set;
 
@@ -35,8 +35,8 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetSe
         if(object.getSpecialities().size()>0)
             object.getSpecialities().forEach(speciality -> {
                 if(speciality.getId()==null){
-                    Speciality savedSpeciality=specialitiesServices.save(speciality);
-                    speciality.setId(savedSpeciality.getId());
+                    Specialty savedSpecialty =specialitiesServices.save(speciality);
+                    speciality.setId(savedSpecialty.getId());
                 }
             });
 

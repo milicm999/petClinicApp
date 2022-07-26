@@ -1,12 +1,12 @@
 package com.example.petClinicApp.model.bootstrap;
 
 import com.example.petClinicApp.model.*;
-import com.example.petClinicApp.model.services.PetTypeService;
-import com.example.petClinicApp.model.services.SpecialitiesServices;
+import com.example.petClinicApp.services.PetTypeService;
+import com.example.petClinicApp.services.SpecialitiesServices;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.example.petClinicApp.model.services.OwnerService;
-import com.example.petClinicApp.model.services.VetService;
+import com.example.petClinicApp.services.OwnerService;
+import com.example.petClinicApp.services.VetService;
 
 import java.time.LocalDate;
 
@@ -45,17 +45,17 @@ public class LoadData implements CommandLineRunner {
         cat.setName("cat");
         PetType savedCatPetType=petTypeService.save(cat);
 
-        Speciality radiology=new Speciality();
+        Specialty radiology=new Specialty();
         radiology.setDescription("Radiology");
-        Speciality savedRadiology=specialitiesServices.save(radiology);
+        Specialty savedRadiology=specialitiesServices.save(radiology);
 
-        Speciality surgery=new Speciality();
+        Specialty surgery=new Specialty();
         surgery.setDescription("Surgery");
-        Speciality savedSurgery=specialitiesServices.save(surgery);
+        Specialty savedSurgery=specialitiesServices.save(surgery);
 
-        Speciality dentistry=new Speciality();
+        Specialty dentistry=new Specialty();
         dentistry.setDescription("Dentistry");
-        Speciality savedDentistry=specialitiesServices.save(dentistry);
+        Specialty savedDentistry=specialitiesServices.save(dentistry);
 
         Owner owner1=new Owner();
         owner1.setFirstName("Maja");
