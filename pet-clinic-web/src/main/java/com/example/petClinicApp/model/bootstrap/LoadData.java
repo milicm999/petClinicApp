@@ -2,11 +2,13 @@ package com.example.petClinicApp.model.bootstrap;
 
 import com.example.petClinicApp.model.*;
 import com.example.petClinicApp.services.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+@Slf4j
 @Component
 public class LoadData implements CommandLineRunner {
 
@@ -35,6 +37,7 @@ public class LoadData implements CommandLineRunner {
     public void run(String... args) throws Exception {
         int count=petTypeService.findALL().size();
         if(count==0) {
+            log.debug("Loading data");
             loadData();
         }
     }
@@ -78,6 +81,8 @@ public class LoadData implements CommandLineRunner {
         owner2.setTelephone("065352568");
 
         ownerService.save(owner2);
+
+        Owner.builder().address("Kralja Petra I").city("Kragujevac").telephone("065385924").build();
 
         Pet nemanjinPas=new Pet();
         nemanjinPas.setName("Cezar");
