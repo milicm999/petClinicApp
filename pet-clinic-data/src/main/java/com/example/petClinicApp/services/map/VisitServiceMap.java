@@ -4,11 +4,13 @@ import com.example.petClinicApp.model.Visit;
 import com.example.petClinicApp.repositories.PetRepository;
 import com.example.petClinicApp.services.PetService;
 import com.example.petClinicApp.services.VisitSerice;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class VisitServiceMap extends AbstractMapService<Visit,Long> implements VisitSerice {
 
     private final PetService petService;

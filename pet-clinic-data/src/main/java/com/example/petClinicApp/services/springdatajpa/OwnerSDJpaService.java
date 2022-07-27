@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.Set;
 
 
-@Profile({"springdatajpa","default"})
+@Profile("springdatajpa")
 @Service("owners")
 public class OwnerSDJpaService implements OwnerService {
 

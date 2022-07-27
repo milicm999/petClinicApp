@@ -11,7 +11,7 @@ import com.example.petClinicApp.services.OwnerService;
 import java.util.Set;
 
 @Service("owners")
-@Profile("map")
+@Profile({"default","map"})
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
 
     private final PetTypeService petTypeService;

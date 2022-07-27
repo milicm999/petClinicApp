@@ -18,13 +18,17 @@ public class LoadData implements CommandLineRunner {
 
     private final VisitSerice visitSerice;
 
-    public LoadData(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialitiesServices specialitiesServices, VisitSerice visitSerice)
+    private final PetService petService;
+
+    public LoadData(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+                    SpecialitiesServices specialitiesServices, VisitSerice visitSerice, PetService petService)
     {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialitiesServices = specialitiesServices;
         this.visitSerice = visitSerice;
+        this.petService = petService;
     }
 
     @Override
@@ -80,6 +84,9 @@ public class LoadData implements CommandLineRunner {
         nemanjinPas.setPetType(savedDogPetType);
         nemanjinPas.setOwner(owner2);
         nemanjinPas.setBirthDay(LocalDate.now());
+
+        petService.save(nemanjinPas);
+
         owner2.getPets().add(nemanjinPas);
 
         Visit visit1=new Visit();
@@ -94,7 +101,12 @@ public class LoadData implements CommandLineRunner {
         majinPas.setOwner(owner1);
         majinPas.setBirthDay(LocalDate.now());
         majinPas.setPetType(savedDogPetType);
+
+        petService.save(majinPas);
+
         owner1.getPets().add(majinPas);
+
+
 
         System.out.println("Owners are loaded...");
 
